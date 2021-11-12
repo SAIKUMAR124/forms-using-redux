@@ -1,7 +1,6 @@
 .form-inp{
     width: 90%;
     height: 3rem;
-    margin-bottom: 2rem;
     padding-left: 1rem;
 }
 
@@ -16,4 +15,12 @@
 .text-fill-form{
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.error-msg{
+    text-align: start;
+    padding-left: 5%;
+    height: 2rem;
+    color: red;
+    padding-top: 0.2rem;
 }
