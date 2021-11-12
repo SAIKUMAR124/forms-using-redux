@@ -5,6 +5,7 @@ import { setFormData } from '../redux';
 import SuccessPage from './SuccessPage';
 import './FormPage.css';
 import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const FormPage = ({userData, setUserData}) => {
     const [submitted, setSubmitted] = useState(false);
@@ -55,8 +56,15 @@ const FormPage = ({userData, setUserData}) => {
                     placeholder='Please Enter Email'
                     {...formik.getFieldProps('email')}
                 /><br/>
-
+                <div 
+                style={{
+                    display: 'flex',
+                    justifyContent: 'space-around'
+                }}>
+                <Link to='/'><button className='submit-btn' >Back</button></Link>
                 <button className='submit-btn' type='submit'>Submit</button>
+                </div>
+                
             </form>
             </div>
         {submitted && <Redirect to='/success' />}
